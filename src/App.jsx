@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ItemListContainer mensaje="Bienvenidos a Codigo de Vestimena!"/>
+    <ItemListContainer mensaje="Bienvenidos a Codigo de Vestimenta!"/>
     </>
   )
 }
