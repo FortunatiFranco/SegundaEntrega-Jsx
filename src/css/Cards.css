@@ -1,0 +1,13 @@
+.Cards img{
+    width: 350px;
+    height: 350px;
+}
+
+.Cards{
+    padding: 50px;
+}
+
+.Cards button{
+    display: flex;
+    justify-self: center;
+}
