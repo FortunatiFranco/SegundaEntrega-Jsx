@@ -1,5 +1,5 @@
 import { IoCartOutline } from "react-icons/io5";
-import "../css/Carrito.css"
+import "../css/carrito.css"
 
 
 const CartWidget = ()=>{
