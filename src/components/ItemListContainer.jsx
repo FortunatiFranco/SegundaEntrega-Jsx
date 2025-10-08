@@ -3,12 +3,15 @@ import '../css/ItemListContainer.css'
 import { getProducts } from '../mock/AsyncService'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import Loader from './Loader'
 
 
 const ItemListContainer = (props)=>{
     const [data, setData]=useState([])
     const {type}=useParams()
+    const [loader, setLoader]=useState(false)
     useEffect(()=>{
+        setLoader(true)
         getProducts()
         .then((res)=> {
             if(type){
@@ -18,13 +21,19 @@ const ItemListContainer = (props)=>{
             }
         })
         .catch((error)=> console.error('Ocurrio un error', error))
+        .finally(()=> setLoader(false))
     },[type])
 
     return(
-        <div>
+        <>
+        {
+        loader ? <Loader/>
+        : <>
             <h1>{props.mensaje} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h1>
             <ItemList data={data}/>
-        </div>
+        </>
+        }
+        </>
     )
 }
 

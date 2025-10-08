@@ -5,10 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error from './components/Error';
+import { carritoProvider } from './context/carritoContext';
 
 function App() {
   return (
     <BrowserRouter>
+    <carritoProvider>
     <NavBar/>
     <Routes>
       <Route path='/' element={<ItemListContainer mensaje="Bienvenidos a Codigo de Vestimenta!"/>}/>
@@ -16,6 +18,7 @@ function App() {
       <Route path='/category/:type' element={<ItemListContainer mensaje="Estas en la categoria:"/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
+    </carritoProvider>
     </BrowserRouter>
   )
 }
