@@ -20,6 +20,11 @@ const CartView = () => {
     ))
     }
     </div>
+    <span>Total a pagar: $</span>
+    <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', padding:'2rem'}}>
+        <button className='btn btn-danger'>Limpiar Carrito</button>
+        <button className='btn btn-success'>Terminar Compra</button>
+    </div>
     </div>
     )
 }
