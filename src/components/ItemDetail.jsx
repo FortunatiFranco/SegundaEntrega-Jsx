@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount"
 import { CarritoContext } from "../context/CarritoContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({detalle})=>{
     const {addItem}=useContext(CarritoContext)
