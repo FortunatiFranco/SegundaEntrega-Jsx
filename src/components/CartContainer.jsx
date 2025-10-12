@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
-import { carritoContext } from '../context/carritoContext'
+import { CarritoContext } from '../context/CarritoContext'
 import EmptyCart from './EmptyCart'
 import CartView from './CartView'
 
 const CartContainer = () => {
-    const {carrito}=useContext(carritoContext)
+    const {Carrito}=useContext(CarritoContext)
     return (
     <>
     {
-        !carrito.length ? <EmptyCart/> : <CartView/>
+        !Carrito.length ? <EmptyCart/> : <CartView/>
     }
     </>
     )

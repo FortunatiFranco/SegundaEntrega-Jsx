@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 
-export const carritoContext = createContext();
+export const CarritoContext = createContext();
 
-export const carritoProvider = ({children})=>{
-    const [carrito, setCarrito]=useState([]);
+export const CarritoProvider = ({children})=>{
+    const [Carrito, setCarrito]=useState([]);
 
     const addItem = (item,qty)=>{
         if(isInCart(item.id)){
             setCarrito(
-                carrito.map((prod)=>{
+                Carrito.map((prod)=>{
                     if(item.id === prod.id){
                         return {...prod, quantity: prod.quantity + qty}
                     }else{
@@ -17,7 +17,7 @@ export const carritoProvider = ({children})=>{
                 })
             )
         }else{
-        setCarrito([...carrito, {...item, quantity:qty}])
+        setCarrito([...Carrito, {...item, quantity:qty}])
     }
 }
 
@@ -26,17 +26,17 @@ export const carritoProvider = ({children})=>{
     }
 
     const removeItem = (id)=>{
-        setCarrito(carrito.filter((prod)=> prod.id !== id))
+        setCarrito(Carrito.filter((prod)=> prod.id !== id))
     }
 
     const isInCart =(id)=>{
-        return carrito.some((prod)=> prod.id === id)
+        return Carrito.some((prod)=> prod.id === id)
     }
 
 
     return (
-        <carritoContext.Provider value={{carrito,addItem,clear,removeItem}}>
+        <CarritoContext.Provider value={{Carrito,addItem,clear,removeItem}}>
             {children}
-        </carritoContext.Provider>
+        </CarritoContext.Provider>
     )
 }

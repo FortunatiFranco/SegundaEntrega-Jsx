@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount"
-import { carritoContext } from "../context/carritoContext";
+import { CarritoContext } from "../context/CarritoContext";
 
 const ItemDetail = ({detalle})=>{
-    const {addItem}=useContext(carritoContext)
+    const {addItem}=useContext(CarritoContext)
 
     const [Purchase, setPurchase]=useState(false)
 

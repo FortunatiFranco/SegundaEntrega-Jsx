@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
-import { carritoContext } from '../context/carritoContext'
+import { CarritoContext } from '../context/CarritoContext'
 
 const CartView = () => {
-    const {clear,removeItem,carrito}=useContext(carritoContext)
+    const {clear,removeItem,Carrito}=useContext(CarritoContext)
     return (
     <div>
         <h1>Tu Carrito 🛒</h1>
     <div>
     {
-    carrito.map((prod)=>(
+    Carrito.map((prod)=>(
         <div key={prod.id} style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%', padding:'2rem'}}>
             <img src={prod.img} alt={prod.name} style={{width:'9rem' }}/>
             <span>{prod.name}</span>
