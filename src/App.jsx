@@ -11,7 +11,7 @@ import CartContainer from './components/CartContainer';
 function App() {
   return (
     <BrowserRouter>
-    <carritoProvider>
+    <CarritoProvider>
     <NavBar/>
     <Routes>
       <Route path='/' element={<ItemListContainer mensaje="Bienvenidos a Codigo de Vestimenta!"/>}/>
@@ -20,7 +20,7 @@ function App() {
       <Route path='/cart' element={<CartContainer/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
-    </carritoProvider>
+    </CarritoProvider>
     </BrowserRouter>
   )
 }
