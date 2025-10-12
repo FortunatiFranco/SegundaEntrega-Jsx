@@ -56,7 +56,7 @@ const productos = [
     {
         id: "07",
         name: "Remera Lacoste nw26",
-        img: "https://i.postimg.cc/x8dt6PFB/lacoste-remera26.webp",
+        img: "https://i.postimg.cc/v82Z3LqF/remera-lacoste26.webp",
         price: 150000,
         stock: 45,
         description: "temporada 2k26",
