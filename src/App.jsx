@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error from './components/Error';
-import { carritoProvider } from './context/CarritoContext';
+import { CarritoProvider } from './context/CarritoContext';
 import CartContainer from './components/CartContainer';
 
 function App() {
