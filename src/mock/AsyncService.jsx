@@ -56,7 +56,7 @@ const productos = [
     {
         id: "07",
         name: "Remera Lacoste nw26",
-        img: "https://i.postimg.cc/vBy78ybs/remera-lacoste.jpg",
+        img: "https://i.postimg.cc/x8dt6PFB/lacoste-remera26.webp",
         price: 150000,
         stock: 45,
         description: "temporada 2k26",
@@ -65,7 +65,7 @@ const productos = [
     {
         id: "08",
         name: "Gorra New Era x DUKI",
-        img: "https://i.postimg.cc/YjBMZdQb/New-Era-x-Duki.jpg",
+        img: "https://i.postimg.cc/3Npd5sqq/New-Era-x-Duki.jpg",
         price: 95000,
         stock: 120,
         description: "temporada 2k26",

@@ -28,7 +28,7 @@ const comprar = ()=>{
         <span>{count}</span>
         <button className='btn btn-success' onClick={sumar}>+</button>
     </div>
-    <button onClick={comprar} disabled={stock === 0 || count === 0}>Comprar</button>
+    <button onClick={comprar} disabled={stock === 0 || count === 0} className='btn btn-primary'>Comprar</button>
     </div>
 )
 }
