@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import itemCount from "./ItemCount"
+import ItemCount from "./ItemCount"
 import { carritoContext } from "../context/carritoContext";
 
 const ItemDetail = ({detalle})=>{
@@ -23,7 +23,7 @@ const ItemDetail = ({detalle})=>{
             <p>Stock Disponible:{detalle.stock} unidades</p>
             { 
             Purchase ? <Link className="btn btn-dark" to='/cart'>ir al carrito</Link>
-            : <itemCount stock={detalle.stock} onAdd={onAdd}/>}
+            : <ItemCount stock={detalle.stock} onAdd={onAdd}/>}
         </div>
     )
 }
