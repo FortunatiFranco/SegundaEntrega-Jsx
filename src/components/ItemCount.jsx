@@ -25,7 +25,7 @@ const comprar = ()=>{
     <div style={{width:'10%'}} className=' d-flex justify-content-between align-items-center'>
     <div>
         <button className='btn btn-danger' onClick={restar}>-</button>
-        <span>{count}</span>
+        <span style={{padding:'10px'}}>{count}</span>
         <button className='btn btn-success' onClick={sumar}>+</button>
     </div>
     <button onClick={comprar} disabled={stock === 0 || count === 0} className='btn btn-primary'>Comprar</button>
