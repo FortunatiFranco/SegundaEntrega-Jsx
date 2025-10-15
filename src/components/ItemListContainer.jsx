@@ -1,26 +1,33 @@
 import { useEffect, useState } from 'react'
 import '../css/ItemListContainer.css'
-import { getProducts } from '../mock/AsyncService'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../services/firebase'
 
 
 const ItemListContainer = (props)=>{
     const [data, setData]=useState([])
     const {type}=useParams()
     const [loader, setLoader]=useState(false)
+
     useEffect(()=>{
         setLoader(true)
-        getProducts()
-        .then((res)=> {
-            if(type){
-                setData(res.filter((prod)=> prod.category === type))
-            }else{
-                setData(res)
-            }
+        const prodColecction = type 
+        ? query(collection(db, "productos"), where("category", "==", type))
+        : collection(db, "productos")
+        getDocs(prodColecction)
+        .then((res)=>{
+            const listApp = res.docs.map((doc)=>{
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            })
+            setData(listApp)
         })
-        .catch((error)=> console.error('Ocurrio un error', error))
+        .catch((error)=> console.log(error))
         .finally(()=> setLoader(false))
     },[type])
 
