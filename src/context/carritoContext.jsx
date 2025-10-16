@@ -33,9 +33,18 @@ export const CarritoProvider = ({children})=>{
         return Carrito.some((prod)=> prod.id === id)
     }
 
+    const totalCarrito = ()=>{
+        return Carrito.reduce((acumulador, prod)=> acumulador += (prod.price * prod.quantity),0)
+    }
+
+
+    const carritoQuantity = ()=>{
+        return Carrito.reduce((acumulador, prod)=> acumulador += (prod.quantity),0)
+    }
+
 
     return (
-        <CarritoContext.Provider value={{Carrito,addItem,clear,removeItem}}>
+        <CarritoContext.Provider value={{Carrito,addItem,clear,removeItem,totalCarrito,carritoQuantity}}>
             {children}
         </CarritoContext.Provider>
     )

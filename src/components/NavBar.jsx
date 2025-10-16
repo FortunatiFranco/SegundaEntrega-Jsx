@@ -13,7 +13,7 @@ const NavBar = ()=>{
             <NavLink to='/category/nuevo'>Nuevo</NavLink>
             <NavLink to='/category/oferta'>Ofertas</NavLink>
             <NavLink to='/category/PreLanzamiento'>pre-Lanzamiento 2k26</NavLink>
-            <CartWidget/>
+            <NavLink to='/cart'><CartWidget/></NavLink>
         </nav>
     )
 }
