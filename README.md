@@ -12,6 +12,7 @@ Codigo De Vestimenta es un proyecto elaborado en modo de practica dentro del cam
 - react-icons
 - react-router-dom
 - react
+- sweetalert2
 4. Una vez seguido todos los pasos, ejecutar el proyecto de manera local `npm run dev`
 
 ![app](/public/pantalla.jpg)
