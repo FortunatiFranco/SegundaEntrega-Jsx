@@ -3,8 +3,9 @@ import '../css/ItemListContainer.css'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { addDoc, collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../services/firebase'
+import { productos } from '../mock/AsyncService'
 
 
 const ItemListContainer = (props)=>{
