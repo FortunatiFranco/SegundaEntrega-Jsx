@@ -1,12 +1,21 @@
-# React + Vite
+# Codigo De Vestimenta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Codigo De Vestimenta es un proyecto elaborado en modo de practica dentro del campo **CODER HOUSE**, el cual busca continuar con el desarrollo personal y practicar los conocimientos adquiridos en dicho campo, en este caso precisamente en la materia **REACT**.
 
-Currently, two official plugins are available:
+## Instalacion del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone el repositorio
+2. Hacer el comando `cd MY-PROYECT-01`
+3. instale dependencias con el comando `npm install`
+- firebase
+- react-bootstrap
+- react-icons
+- react-router-dom
+- react
+4. Una vez seguido todos los pasos, ejecutar el proyecto de manera local `npm run dev`
 
-## Expanding the ESLint configuration
+![app](/public/pantalla.jpg)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Authors
+
+- [@FortunatiFranco](https://github.com/FortunatiFranco)
